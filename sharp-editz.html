@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sharp Editz | Video Editing, Graphic Design & Web Design</title>
+<meta name="description" content="Sharp Editz cuts sharp videos, designs bold graphics and builds fast websites for creators and brands.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F4F2EC;--panel:#FFFFFF;--ink:#12142B;--mute:#565A78;--line:#D9D6CB;--red:#E5302F;--c1:#FF6B5E;--c2:#3DD6F5;--c3:#FFD24A;--onclip:#12142B;--track:#E7E4DA;
+--d:'Archivo','Arial Narrow',Arial,sans-serif;--b:'DM Sans',system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1226;--panel:#181C3A;--ink:#F4F2EC;--mute:#A6AAC8;--line:#2A2F55;--red:#FF4D4D;--track:#171A35}}
+:root[data-theme="dark"]{--bg:#0F1226;--panel:#181C3A;--ink:#F4F2EC;--mute:#A6AAC8;--line:#2A2F55;--red:#FF4D4D;--track:#171A35}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;height:100%;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
+:root{box-sizing:border-box;padding-bottom:env(safe-area-inset-bottom,0px)}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--b);min-height:100%;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bg);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px);margin-top:calc(-1*env(safe-area-inset-top,0px))}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font:900 24px/1 var(--d);font-stretch:75%;letter-spacing:-.01em;text-decoration:none}
+.logo i{color:var(--red);font-style:normal}
+nav{display:flex;gap:26px;align-items:center;font-weight:500;font-size:15px}
+nav a{text-decoration:none}
+nav a:hover{color:var(--red)}
+.btn{display:inline-block;background:var(--red);color:#fff;font:700 16px var(--b);padding:14px 26px;text-decoration:none;border:0;cursor:pointer;clip-path:polygon(0 0,100% 0,100% 70%,calc(100% - 14px) 100%,0 100%)}
+.btn:hover{filter:brightness(1.1)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink);clip-path:none}
+@media(max-width:760px){nav a:not(.btn){display:none}}
+h1,h2,h3{font-family:var(--d);line-height:.95;letter-spacing:-.02em}
+h1{font-size:clamp(64px,15vw,190px);font-weight:900;font-stretch:62%;text-transform:none}
+h2{font-size:clamp(40px,7vw,76px);font-weight:800;font-stretch:70%;margin-bottom:14px}
+h3{font-size:30px;font-weight:800;font-stretch:80%}
+section{padding:84px 0}
+.hero{padding:56px 0 40px}
+.hero p.lead{max-width:560px;font-size:20px;color:var(--mute);margin:22px 0 28px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+/* timeline */
+.tl{position:relative;margin-top:44px;border-top:1px solid var(--line);padding:14px 0 6px}
+.tr{display:flex;align-items:center;gap:10px;height:54px;margin-bottom:8px}
+.tr b{flex:0 0 34px;font:800 13px var(--d);color:var(--mute)}
+.lane{position:relative;flex:1;height:100%;background:var(--track)}
+.clip{position:absolute;top:5px;bottom:5px;color:var(--onclip);font:700 14px/1 var(--b);display:flex;align-items:center;padding:0 14px;white-space:nowrap;overflow:hidden;clip-path:polygon(0 0,100% 0,calc(100% - 10px) 100%,0 100%)}
+.v1 .clip{background:var(--c1)}.v2 .clip{background:var(--c2)}.a1 .clip{background:var(--c3)}
+.ph{position:absolute;top:-8px;bottom:0;left:calc(34px + 10px);width:2px;background:var(--red);animation:sweep 2.6s cubic-bezier(.6,.05,.2,1) .3s forwards}
+.ph::before{content:"";position:absolute;top:0;left:-7px;border:8px solid transparent;border-top:12px solid var(--red)}
+@keyframes sweep{to{left:calc(34px + 10px + (100% - 44px)*.62)}}
+@media(prefers-reduced-motion:reduce){.ph{animation:none;left:calc(34px + 10px + (100% - 44px)*.62)}html{scroll-behavior:auto}}
+@media(max-width:640px){.clip{font-size:12px;padding:0 8px}}
+/* services */
+.svc{display:grid;gap:0;border-top:2px solid var(--ink)}
+.row{display:grid;grid-template-columns:1fr 1.2fr;gap:24px;padding:34px 0;border-bottom:1px solid var(--line)}
+.row p{color:var(--mute);max-width:46ch}
+.row ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.row li{font-size:14px;font-weight:500;padding:6px 12px;background:var(--panel);border-left:4px solid var(--c1)}
+.row:nth-child(2) li{border-color:var(--c2)}.row:nth-child(3) li{border-color:var(--c3)}
+@media(max-width:760px){.row{grid-template-columns:1fr}}
+/* work */
+.work{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:30px}
+.tile{aspect-ratio:9/12;position:relative;display:flex;align-items:flex-end;padding:16px;font-weight:700;color:#12142B;clip-path:polygon(0 0,100% 0,100% calc(100% - 26px),calc(100% - 26px) 100%,0 100%)}
+.tile small{display:block;font-weight:500;opacity:.75}
+.tile:nth-child(1){background:var(--c1)}.tile:nth-child(2){background:var(--c2)}.tile:nth-child(3){background:var(--c3)}.tile:nth-child(4){background:#B9A6FF}
+/* motion */
+.ln{display:block;overflow:hidden;padding-bottom:.1em;margin-bottom:-.1em}
+.ln>span{display:block;transform:translateY(110%);animation:up .9s cubic-bezier(.2,.8,.2,1) forwards}
+.ln:nth-child(2)>span{animation-delay:.18s;color:var(--red)}
+@keyframes up{to{transform:none}}
+.rot{margin-top:22px;font:800 clamp(24px,5vw,40px)/1.1 var(--d);font-stretch:75%;height:1.2em;overflow:hidden;opacity:0;animation:fade .6s .7s forwards}
+.rot b{display:inline-block;background:var(--c3);color:#12142B;padding:2px 12px;animation:word 2.2s ease-in-out infinite}
+@keyframes word{0%{transform:translateY(120%)}14%,80%{transform:none}100%{transform:translateY(-120%)}}
+@keyframes fade{to{opacity:1}}
+.hero p.lead,.hero .cta{opacity:0;animation:fade .7s 1s forwards}
+.band{background:var(--red);color:#fff;overflow:hidden;white-space:nowrap;padding:14px 0;transform:rotate(-1.2deg);margin:26px -20px 0}
+.band div{display:inline-block;font:900 26px/1 var(--d);font-stretch:70%;letter-spacing:.03em;animation:mq 22s linear infinite}
+.band span{padding:0 18px}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.ln>span,.rot,.rot b,.hero p.lead,.hero .cta,.band div{animation:none;transform:none;opacity:1}}
+/* glow-up */
+.hero{position:relative;isolation:isolate;overflow:hidden}
+.hero .wrap{position:relative}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(520px circle at var(--mx,72%) var(--my,18%),color-mix(in srgb,var(--red) 26%,transparent),transparent 62%),radial-gradient(460px circle at 6% 92%,color-mix(in srgb,var(--c2) 22%,transparent),transparent 62%),linear-gradient(var(--line) 1px,transparent 1px) 0 0/48px 48px,linear-gradient(90deg,var(--line) 1px,transparent 1px) 0 0/48px 48px;-webkit-mask-image:linear-gradient(#000 55%,transparent);mask-image:linear-gradient(#000 55%,transparent)}
+.stks{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 0}
+.stk{font:900 20px/1 var(--d);font-stretch:75%;padding:10px 16px;color:#12142B;box-shadow:5px 5px 0 var(--ink);transform:rotate(var(--r));animation:bob 4s ease-in-out infinite}
+.stk:nth-child(1){background:var(--c1);--r:-4deg}.stk:nth-child(2){background:var(--c2);--r:3deg;animation-delay:-1s}.stk:nth-child(3){background:var(--c3);--r:-2deg;animation-delay:-2s}.stk:nth-child(4){background:#B9A6FF;--r:5deg;animation-delay:-3s}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(var(--r))}50%{transform:translateY(-12px) rotate(var(--r))}}
+@media(min-width:960px){.stks{display:block;position:absolute;right:0;top:10px;width:300px;height:430px;margin:0}.stk{position:absolute;font-size:30px;padding:14px 24px}.stk:nth-child(1){top:0;right:110px}.stk:nth-child(2){top:110px;right:0}.stk:nth-child(3){top:230px;right:150px}.stk:nth-child(4){top:340px;right:20px}}
+.wave{display:flex;align-items:center;gap:4px;height:64px;margin-top:34px}
+.wave i{flex:1;max-width:10px;height:100%;background:var(--red);transform:scaleY(.15);animation:wv 1.1s ease-in-out infinite alternate}
+.wave i:nth-child(3n){background:var(--c2)}.wave i:nth-child(5n){background:var(--c3)}
+@keyframes wv{to{transform:scaleY(1)}}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .7s,transform .7s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+.tile,.pack,.row li{transition:transform .3s,box-shadow .3s}
+.tile:hover{transform:translateY(-8px) rotate(-1.2deg)}
+.pack:hover{transform:translateY(-8px);box-shadow:0 18px 0 -8px var(--red)}
+.tile{background-image:linear-gradient(135deg,rgba(255,255,255,.4),transparent 55%),repeating-linear-gradient(90deg,rgba(18,20,43,.07) 0 2px,transparent 2px 22px)}
+h2::after{content:"";display:block;width:70px;height:9px;margin-top:16px;background:var(--red);clip-path:polygon(0 0,100% 0,calc(100% - 9px) 100%,0 100%)}
+.contact h2::after{background:var(--c3)}
+.btn{transition:transform .2s,filter .2s;box-shadow:none}.btn:hover{transform:translateY(-3px)}
+@media(prefers-reduced-motion:reduce){.stk,.wave i{animation:none}.wave i{transform:scaleY(.6)}.rv{opacity:1;transform:none;transition:none}}
+/* why */
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:0;margin-top:30px;border-top:2px solid var(--ink)}
+.why div{padding:24px 22px 24px 0;border-bottom:1px solid var(--line)}
+.why h3{font-size:26px;margin-bottom:6px}
+.why p{color:var(--mute);font-size:15px;max-width:34ch}
+.tile::after{content:attr(data-k);position:absolute;top:14px;left:14px;font:800 13px var(--d);letter-spacing:.04em;background:#12142B;color:#fff;padding:5px 10px}
+.tile.play::before{content:"";position:absolute;top:50%;left:50%;width:64px;height:64px;margin:-44px 0 0 -26px;background:#12142B;clip-path:polygon(15% 0,100% 50%,15% 100%)}
+.pack{position:relative}
+.pack.hot::before{content:"Most popular";position:absolute;top:-6px;right:18px;background:var(--red);color:#fff;font:700 12px var(--b);padding:6px 12px}
+.mail{font:700 clamp(20px,4vw,30px) var(--d);font-stretch:80%;color:var(--c3);text-decoration:none;border-bottom:3px solid var(--red)}
+/* process */
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;margin-top:30px;border-left:2px solid var(--ink)}
+.step{padding:6px 22px 20px;border-right:1px solid var(--line)}
+.step::before{counter-increment:s;content:counter(s);font:900 54px/1 var(--d);color:var(--red)}
+.step h3{font-size:24px;margin:8px 0 6px}
+.step p{color:var(--mute);font-size:15px}
+/* packs */
+.packs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:30px}
+.pack{background:var(--panel);padding:26px;border-top:6px solid var(--c1);display:flex;flex-direction:column}
+.pack:nth-child(2){border-color:var(--c2)}.pack:nth-child(3){border-color:var(--c3)}
+.pack ul{padding-left:18px;margin:14px 0 22px;color:var(--mute);flex:1}
+.pack .btn{text-align:center}
+/* faq */
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{cursor:pointer;font:700 20px var(--b);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";float:right;color:var(--red);font-size:26px;line-height:1}
+details[open] summary::after{content:"\2212"}
+details p{color:var(--mute);margin-top:10px;max-width:60ch}
+/* contact */
+.contact{background:var(--ink);color:var(--bg)}
+.contact h2{color:var(--bg)}
+.contact p.sub{color:inherit;opacity:.75;max-width:48ch;margin-bottom:26px}
+form{display:grid;gap:14px;max-width:560px}
+input,select,textarea{width:100%;font:400 16px var(--b);padding:14px;background:transparent;color:var(--bg);border:0;border-bottom:2px solid var(--bg);border-radius:0}
+select option{color:#12142B}
+::placeholder{color:var(--bg);opacity:.6}
+.msg{min-height:24px;font-weight:500}
+footer{padding:30px 0 40px;font-size:14px;color:var(--mute)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<a class="logo" href="#top">SHARP<i>/</i>EDITZ</a>
+<nav><a href="#services">Services</a><a href="#work">Work</a><a href="#packs">Packages</a><a href="#faq">FAQ</a><a class="btn" href="#contact">Get a quote</a></nav>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+<h1><span class="ln"><span>Cut sharp.</span></span><span class="ln"><span>Look sharp.</span></span></h1>
+<p class="rot" aria-live="off">We make&nbsp;<b id="rw">Reels</b></p>
+<p class="lead">Sharp Editz is a creative studio for video editing, graphic design and website design. Fast turnarounds, clean finishes, no fluff.</p>
+<div class="cta"><a class="btn" href="#contact">Start a project</a><a class="btn ghost" href="#work">See the work</a></div>
+<div class="stks" aria-hidden="true"><span class="stk">4K EDITS</span><span class="stk">REELS</span><span class="stk">LOGOS</span><span class="stk">WEB</span></div>
+<div class="wave" id="wv" aria-hidden="true"></div>
+<div class="tl" aria-label="Editing timeline showing our three services">
+<div class="ph"></div>
+<div class="tr v1"><b>V1</b><div class="lane"><span class="clip" style="left:0;width:38%">Reels</span><span class="clip" style="left:39%;width:31%">YouTube edits</span><span class="clip" style="left:71%;width:29%">Ads &amp; promos</span></div></div>
+<div class="tr v2"><b>V2</b><div class="lane"><span class="clip" style="left:8%;width:30%">Thumbnails</span><span class="clip" style="left:40%;width:26%">Logos</span><span class="clip" style="left:68%;width:32%">Social posts</span></div></div>
+<div class="tr a1"><b>A1</b><div class="lane"><span class="clip" style="left:0;width:48%">Landing pages</span><span class="clip" style="left:49%;width:51%">Portfolios &amp; stores</span></div></div>
+</div>
+</div></section>
+
+<div class="band" aria-hidden="true"><div><span>VIDEO EDITING &#10022;</span><span>GRAPHIC DESIGN &#10022;</span><span>WEBSITE DESIGN &#10022;</span><span>VIDEO EDITING &#10022;</span><span>GRAPHIC DESIGN &#10022;</span><span>WEBSITE DESIGN &#10022;</span><span>VIDEO EDITING &#10022;</span><span>GRAPHIC DESIGN &#10022;</span><span>WEBSITE DESIGN &#10022;</span><span>VIDEO EDITING &#10022;</span><span>GRAPHIC DESIGN &#10022;</span><span>WEBSITE DESIGN &#10022;</span></div></div>
+
+<section id="services"><div class="wrap">
+<h2>What we make</h2>
+<div class="svc">
+<div class="row"><div><h3>Video editing</h3></div><div><p>Raw footage in, scroll-stopping video out. Hooks, cuts, captions, sound and colour, built for the platform you post on.</p><ul><li>Reels &amp; Shorts</li><li>YouTube videos</li><li>Podcast clips</li><li>Ads &amp; promos</li><li>Subtitles</li><li>Motion text</li></ul></div></div>
+<div class="row"><div><h3>Graphic design</h3></div><div><p>Visuals that look like one brand, from the first logo sketch to the last post in your calendar.</p><ul><li>Logos &amp; branding</li><li>Thumbnails</li><li>Social media posts</li><li>Carousels</li><li>Posters &amp; flyers</li><li>Pitch decks</li></ul></div></div>
+<div class="row"><div><h3>Website design</h3></div><div><p>Fast, mobile-first sites that explain what you do and make it easy to contact you or buy.</p><ul><li>Landing pages</li><li>Portfolio sites</li><li>Business websites</li><li>Online stores</li><li>Redesigns</li><li>Basic SEO setup</li></ul></div></div>
+</div></div></section>
+
+<section id="work" style="padding-top:20px"><div class="wrap">
+<h2>Recent work</h2>
+<p style="color:var(--mute);max-width:52ch">Your best projects go here. Replace these tiles with real thumbnails, reels and site screenshots.</p>
+<div class="work">
+<div class="tile play" data-k="VIDEO"><span>Reel edit<small>Fitness creator</small></span></div>
+<div class="tile" data-k="DESIGN"><span>YouTube thumbnail set<small>Education channel</small></span></div>
+<div class="tile" data-k="BRANDING"><span>Brand kit<small>Cafe startup</small></span></div>
+<div class="tile" data-k="WEB"><span>Portfolio website<small>Freelancer</small></span></div>
+</div></div></section>
+
+<section style="padding-bottom:20px"><div class="wrap">
+<h2>Why Sharp Editz</h2>
+<div class="why">
+<div><h3>Fast turnaround</h3><p>Clear deadlines and quick first drafts so you can keep posting.</p></div>
+<div><h3>Platform-ready</h3><p>Sizes, pacing and styling built for Instagram, YouTube and the web.</p></div>
+<div><h3>Revisions included</h3><p>We refine with you until the result matches your vision.</p></div>
+<div><h3>One studio</h3><p>Video, design and web under one roof, so everything looks like one brand.</p></div>
+</div></div></section>
+
+<section><div class="wrap">
+<h2>How a project runs</h2>
+<div class="steps">
+<div class="step"><h3>Brief</h3><p>Tell us your goal, style and deadline. Share files or links.</p></div>
+<div class="step"><h3>First cut</h3><p>We send a first draft, design or page for you to react to.</p></div>
+<div class="step"><h3>Revise</h3><p>You give feedback and we refine until it feels right.</p></div>
+<div class="step"><h3>Deliver</h3><p>Final files in the formats you need, ready to post or publish.</p></div>
+</div></div></section>
+
+<section id="packs" style="padding-top:20px"><div class="wrap">
+<h2>Packages</h2>
+<p style="color:var(--mute)">Every project is quoted to your scope. Start with the closest fit.</p>
+<div class="packs">
+<div class="pack"><h3>Reels pack</h3><ul><li>Short-form video edits</li><li>Captions &amp; sound</li><li>Cover thumbnails</li><li>Monthly volume plans</li></ul><a class="btn" href="#contact" data-svc="Video editing">Get a quote</a></div>
+<div class="pack hot"><h3>Brand pack</h3><ul><li>Logo &amp; colour palette</li><li>Social templates</li><li>Thumbnails</li><li>Brand guidelines</li></ul><a class="btn" href="#contact" data-svc="Graphic design">Get a quote</a></div>
+<div class="pack"><h3>Website pack</h3><ul><li>Custom design</li><li>Mobile-first build</li><li>Contact form &amp; WhatsApp</li><li>Launch support</li></ul><a class="btn" href="#contact" data-svc="Website design">Get a quote</a></div>
+</div></div></section>
+
+<section id="faq" style="padding-top:20px"><div class="wrap" style="max-width:800px">
+<h2>Questions</h2>
+<details><summary>How fast will I get my edit?</summary><p>Short videos and single designs are usually ready in a few days. We confirm the timeline before we start.</p></details>
+<details><summary>What do you need from me?</summary><p>Raw footage or assets, references you like, and any brand colours or logos. Rough is fine.</p></details>
+<details><summary>Can I ask for changes?</summary><p>Yes. Each package includes revision rounds so the final result matches what you had in mind.</p></details>
+<details><summary>Which formats do you deliver?</summary><p>Vertical, square and widescreen video, plus PNG, JPG, PDF and source files for designs.</p></details>
+<details><summary>How do I pay?</summary><p>We share a quote first. Payment details are agreed on before work begins.</p></details>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+<h2>Let's cut something sharp.</h2>
+<p class="sub">Tell us what you need. We reply with a quote and a timeline.</p>
+<p class="sub" style="opacity:1;margin-bottom:34px"><a class="mail" href="mailto:versatileindia1000@gmail.com">versatileindia1000@gmail.com</a></p>
+<form id="f">
+<input name="name" placeholder="Your name" required aria-label="Your name">
+<input name="email" type="email" placeholder="Email" required aria-label="Email">
+<select name="svc" aria-label="Service"><option>Video editing</option><option>Graphic design</option><option>Website design</option><option>Something else</option></select>
+<textarea name="msg" rows="4" placeholder="What are we making?" required aria-label="Project details"></textarea>
+<button class="btn" type="submit">Send request</button>
+<p class="msg" id="m" role="status"></p>
+</form>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>&copy; <span id="y"></span> Sharp Editz. All rights reserved.</span><a href="mailto:versatileindia1000@gmail.com">versatileindia1000@gmail.com</a></div></footer>
+
+<script>
+var EMAIL="versatileindia1000@gmail.com";
+var WHATSAPP=""; /* e.g. 919876543210 (country code + number) */
+var W=["Reels","YouTube edits","Thumbnails","Logos","Landing pages","Websites"],i=0,rw=document.getElementById("rw");
+if(!matchMedia("(prefers-reduced-motion:reduce)").matches){rw.addEventListener("animationiteration",function(){i=(i+1)%W.length;rw.textContent=W[i]})}
+var wv=document.getElementById("wv");for(var k=0;k<64;k++){var b=document.createElement("i");b.style.animationDelay=(-Math.random()*1.1).toFixed(2)+"s";b.style.animationDuration=(0.7+Math.random()*0.9).toFixed(2)+"s";wv.appendChild(b)}
+var hero=document.querySelector(".hero");hero.addEventListener("pointermove",function(e){var r=hero.getBoundingClientRect();hero.style.setProperty("--mx",(e.clientX-r.left)+"px");hero.style.setProperty("--my",(e.clientY-r.top)+"px")});
+var els=document.querySelectorAll("section:not(.hero) h2,.row,.tile,.pack,.step,.why div,details");
+if("IntersectionObserver" in window&&!matchMedia("(prefers-reduced-motion:reduce)").matches){var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}})},{threshold:.15});els.forEach(function(el,n){el.classList.add("rv");el.style.transitionDelay=(n%4)*80+"ms";io.observe(el)})}
+document.getElementById("y").textContent=new Date().getFullYear();
+document.querySelectorAll("[data-svc]").forEach(function(a){a.addEventListener("click",function(){document.querySelector("[name=svc]").value=a.dataset.svc})});
+document.getElementById("f").addEventListener("submit",function(e){
+e.preventDefault();var d=new FormData(e.target);
+var body="Name: "+d.get("name")+"\nEmail: "+d.get("email")+"\nService: "+d.get("svc")+"\n\n"+d.get("msg");
+var m=document.getElementById("m");
+if(WHATSAPP){window.open("https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(body),"_blank")}
+else{window.location.href="mailto:"+EMAIL+"?subject="+encodeURIComponent("Project enquiry: "+d.get("svc"))+"&body="+encodeURIComponent(body)}
+m.textContent="Opening your message. Hit send to reach Sharp Editz.";
+});
+</script>
+</body>
+</html>
